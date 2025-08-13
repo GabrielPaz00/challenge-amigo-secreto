@@ -1,4 +1,5 @@
 import showModal from './modal.js';
+import createListItem from './list.js';
 
 const addButton = document.getElementById('button-add');
 const nameInput = document.getElementById('input-name');
@@ -24,12 +25,11 @@ nameInput.addEventListener('keypress', (event) => {
     addName();
   }
 });
+
+friends.forEach((name, index) => createListItem(name, index));
+
 drawButton.addEventListener('click', () => {
-  const friendCount = getFriendCount();
+  const friendCount = friends.length;
   const pivot = Math.floor(Math.random() * friendCount);
   console.log(`Índice del amigo secreto: ${pivot}`);
 });
-
-const getFriendCount = () => {
-  return friends.length;
-};

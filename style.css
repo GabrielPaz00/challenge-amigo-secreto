@@ -237,3 +237,21 @@ ul {
 .blur {
   filter: blur(3px);
 }
+.list-item {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-tertiary);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+/* Icono */
+i.bi-trash-fill {
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+  &:active {
+    color: darkred;
+  }
+}

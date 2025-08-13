@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
     <title>Amigo Secreto</title>
   </head>
 
@@ -43,13 +48,12 @@
           <button class="button-add" id="button-add">Añadir&nbsp;+</button>
         </div>
         <ul
-          id="listaAmigos"
+          id="friend-list"
           class="name-list"
-          aria-labelledby="listaAmigos"
+          aria-labelledby="friend-list-label"
           role="list"
         ></ul>
-        <ul id="result-list" class="result-list" aria-live="polite"></ul>
-
+        <h4 id="result" class="result-list" aria-live="polite"></h4>
         <div class="button-container">
           <button
             class="button-draw"
