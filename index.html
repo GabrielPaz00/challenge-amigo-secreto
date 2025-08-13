@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <main class="main-content">
+    <main class="main-content" id="main-content">
       <header class="header-banner">
         <h1 class="main-title">Amigo Secreto</h1>
         <img
@@ -24,29 +24,36 @@
       </header>
 
       <section class="input-section">
+        <!-- Modal -->
+        <dialog id="modal" class="modal">
+          <form method="dialog">
+            <h3 class="modal-title">¡Atención!</h3>
+            <p class="modal-message">Por favor, ingrese un nombre válido.</p>
+            <button class="modal-close" id="close-modal">Cerrar</button>
+          </form>
+        </dialog>
         <h2 class="section-title">Digite el nombre de sus amigos</h2>
         <div class="input-wrapper">
           <input
             type="text"
-            id="amigo"
+            id="input-name"
             class="input-name"
             placeholder="Escribe un nombre"
           />
           <button class="button-add" id="button-add">Añadir&nbsp;+</button>
         </div>
-
         <ul
           id="listaAmigos"
           class="name-list"
           aria-labelledby="listaAmigos"
           role="list"
         ></ul>
-        <ul id="resultado" class="result-list" aria-live="polite"></ul>
+        <ul id="result-list" class="result-list" aria-live="polite"></ul>
 
         <div class="button-container">
           <button
             class="button-draw"
-            onclick="sortearAmigo()"
+            id="button-draw"
             aria-label="Sortear amigo secreto"
           >
             <img
@@ -59,6 +66,6 @@
       </section>
     </main>
 
-    <script src="app.js" defer></script>
+    <script src="app.js" type="module" defer></script>
   </body>
 </html>
