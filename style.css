@@ -92,7 +92,7 @@ body {
   font-size: 16px;
 }
 .input-name:focus {
-  border-color: purple;
+  border-color: var(--color-purple);
   outline: none;
 }
 
@@ -185,7 +185,6 @@ ul {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   background-color: var(--color-white);
   padding: 20px;
   border-radius: 12px;

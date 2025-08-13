@@ -31,6 +31,5 @@ drawButton.addEventListener('click', () => {
 });
 
 const getFriendCount = () => {
-  console.log(`Número de amigos: ${friendCount}`);
   return friends.length;
 };
