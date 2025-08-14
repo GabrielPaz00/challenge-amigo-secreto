@@ -147,11 +147,12 @@ ul {
 }
 
 .result-list {
-  margin-top: 15px;
+  margin: 1rem;
   color: #05df05;
-  font-size: 22px;
+  font-size: 1.75rem;
   font-weight: bold;
   text-align: center;
+  font-family: 'Inter', serif;
 }
 
 /* Botón de sortear título */
@@ -236,4 +237,33 @@ ul {
 }
 .blur {
   filter: blur(3px);
+}
+.list-item {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-tertiary);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+/* Icono */
+i.bi-trash-fill {
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+  &:active {
+    color: darkred;
+  }
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.5;
+  background-color: var(--color-tertiary);
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+.result--hidden {
+  display: none;
 }
