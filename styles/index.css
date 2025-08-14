@@ -97,8 +97,12 @@ body {
 }
 
 .button-container {
-  width: 300px;
+  box-sizing: border-box;
+  width: 40%;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Estilos de entrada de texto */
@@ -159,6 +163,8 @@ ul {
 .button-draw {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
   width: 100%;
   padding: 10px 40px;
   color: var(--color-white);
@@ -168,16 +174,33 @@ ul {
   font-size: 16px;
 }
 
-.button-draw img {
-  margin-right: 40px;
-}
-
 .button-draw:hover {
   background-color: var(--color-button-hover);
 }
 .button-draw:active {
   background-color: #ff3c00;
   border-color: #ff3c00;
+}
+
+/* Botón de reiniciar */
+.button-retry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 10px 40px;
+  color: var(--color-white);
+  background-color: var(--color-purple-light);
+  border: 2px solid var(--color-purple-light);
+  font-size: 16px;
+}
+.button-retry:hover {
+  background-color: var(--color-purple);
+}
+.button-retry:active {
+  background-color: #563d7c;
+  border-color: #563d7c;
 }
 /*Modal */
 
