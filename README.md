@@ -17,7 +17,6 @@ En este desafío, desarrollarás una aplicación que permita a los usuarios ingr
 - [Flujo de uso](#flujo-de-uso)
 - [Validaciones-y-reglas](#validaciones-y-reglas)
 - [Criterios-de-aceptación](#criterios-de-aceptación)
-- [Notas-de-diseño](#notas-de-diseño)
 
 ---
 
@@ -64,13 +63,5 @@ En este desafío, desarrollarás una aplicación que permita a los usuarios ingr
 - **Estado coherente:** El botón “Sortear Amigo” permanece deshabilitado sin nombres y se habilita al existir al menos uno.
 
 ---
-
-## Notas de diseño
-
-- **Interfaz clara:** Campo de texto con placeholder descriptivo, botones con etiquetas “Adicionar” y “Sortear Amigo”, y una sección de resultado destacada.
-- **Mensajería de error:** Mensajes concisos y visibles cerca del campo de entrada al validar.
-- **Feedback inmediato:** Limpiar el campo tras adicionar y proporcionar confirmación visual al agregar.
-- **Responsividad:** Diseño que se adapte a móviles, tabletas y escritorios.
-- **Internacionalización (opcional):** Preparar etiquetas y mensajes para facilitar traducción en el futuro.
 
 [⬆️ Volver arriba](#amigo-secreto)
