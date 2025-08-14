@@ -147,11 +147,12 @@ ul {
 }
 
 .result-list {
-  margin-top: 1rem;
+  margin: 1rem;
   color: #05df05;
   font-size: 1.75rem;
   font-weight: bold;
   text-align: center;
+  font-family: 'Inter', serif;
 }
 
 /* Botón de sortear título */
@@ -262,4 +263,7 @@ i.bi-trash-fill {
   background-color: var(--color-tertiary);
   color: var(--color-text);
   border-color: var(--color-text);
+}
+.result--hidden {
+  display: none;
 }
