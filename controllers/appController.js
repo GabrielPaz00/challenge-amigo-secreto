@@ -1,8 +1,12 @@
-import showModal from '../views/modalView.js';
-import { renderList, createListItem } from '../views/friendListView.js';
 import nameList from '../data/friendRepository.js';
-import { showResult } from '../views/resultView.js';
 import { isValidName } from '../utils/validation.js';
+import showModal from '../views/modalView.js';
+import {
+  renderList,
+  clearList,
+  createListItem,
+} from '../views/friendListView.js';
+import { showResult, result } from '../views/resultView.js';
 import { addButton, nameInput } from '../views/inputView.js';
 
 const drawButton = document.getElementById('button-draw');
