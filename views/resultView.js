@@ -1,3 +1,7 @@
-export const showResult = (name) => {
+const result = document.getElementById('result');
+
+const showResult = (name) => {
   result.innerHTML = name;
 };
+
+export { result, showResult };

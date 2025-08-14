@@ -1,7 +1,7 @@
 import nameList from '../data/friendRepository.js';
 const list = document.getElementById('friend-list');
 
-export const createListItem = (name) => {
+const createListItem = (name) => {
   const li = document.createElement('li');
   const deleteIcon = document.createElement('i');
   li.className = 'list-item';
@@ -20,10 +20,12 @@ list.addEventListener('click', (event) => {
   }
 });
 
-export const renderList = () => {
+const renderList = () => {
   nameList.get().forEach((name) => createListItem(name));
 };
 
-export const clearList = () => {
+const clearList = () => {
   list.innerHTML = '';
 };
+
+export { createListItem, renderList, clearList };
