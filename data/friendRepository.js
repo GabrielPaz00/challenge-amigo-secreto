@@ -1,5 +1,5 @@
 const nameList = {
-  listFriends: ['Gabriel'],
+  listFriends: [],
   get() {
     return this.listFriends;
   },
