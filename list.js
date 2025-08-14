@@ -1,6 +1,7 @@
+import nameList from './data.js';
 const list = document.getElementById('friend-list');
 
-const createListItem = (name, index) => {
+export const createListItem = (name) => {
   const li = document.createElement('li');
   const deleteIcon = document.createElement('i');
   li.className = 'list-item';
@@ -8,11 +9,21 @@ const createListItem = (name, index) => {
   li.textContent = name;
   list.appendChild(li);
   li.appendChild(deleteIcon);
-  deleteIcon.addEventListener('click', () => deleteItem(index));
 };
 
-const deleteItem = (index) => {
-  console.log(index);
+list.addEventListener('click', (event) => {
+  if (event.target.classList.contains('bi-trash-fill')) {
+    const li = event.target.parentElement;
+    const index = Array.from(list.children).indexOf(li);
+    nameList.deleteFriend(index);
+    li.remove();
+  }
+});
+
+export const renderList = () => {
+  nameList.get().forEach((name) => createListItem(name));
 };
 
-export default createListItem;
+export const clearList = () => {
+  list.innerHTML = '';
+};

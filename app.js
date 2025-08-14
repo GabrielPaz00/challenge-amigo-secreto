@@ -1,22 +1,23 @@
 import showModal from './modal.js';
-import createListItem from './list.js';
-
+import { clearList, createListItem, renderList } from './list.js';
+import nameList from './data.js';
 const addButton = document.getElementById('button-add');
 const nameInput = document.getElementById('input-name');
 const drawButton = document.getElementById('button-draw');
 
-const friends = ['Gabriel', 'Alonso'];
+renderList();
 
 const addName = () => {
   const name = nameInput.value.trim();
   const nameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s'-]+$/;
   if (nameRegex.test(name) && name.length > 0) {
-    friends.push(name);
+    nameList.addFriend(name);
+    createListItem(name);
     nameInput.value = '';
   } else {
     showModal();
   }
-  console.log(friends);
+  console.log(nameList.get());
 };
 
 addButton.addEventListener('click', addName);
@@ -26,10 +27,7 @@ nameInput.addEventListener('keypress', (event) => {
   }
 });
 
-friends.forEach((name, index) => createListItem(name, index));
-
 drawButton.addEventListener('click', () => {
-  const friendCount = friends.length;
-  const pivot = Math.floor(Math.random() * friendCount);
+  const pivot = Math.floor(Math.random() * nameList.get().length);
   console.log(`Índice del amigo secreto: ${pivot}`);
 });
