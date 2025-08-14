@@ -1,4 +1,4 @@
-import nameList from './data.js';
+import nameList from '../data/friendRepository.js';
 const list = document.getElementById('friend-list');
 
 export const createListItem = (name) => {
