@@ -1,4 +1,5 @@
 const nameList = {
+  //array para almacenar los nombres
   listFriends: [],
   get() {
     return this.listFriends;

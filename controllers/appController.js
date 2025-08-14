@@ -7,12 +7,13 @@ import {
   createListItem,
 } from '../views/friendListView.js';
 import { showResult, result } from '../views/resultView.js';
-import { addButton, nameInput } from '../views/inputView.js';
+import { addButton, nameInput, backButton } from '../views/inputView.js';
 
 const drawButton = document.getElementById('button-draw');
 
 renderList();
 
+//función para actualizar la lista de amigos
 const handleAddName = () => {
   const name = nameInput.value.trim();
   if (isValidName(name)) {
@@ -24,11 +25,14 @@ const handleAddName = () => {
   }
 };
 
+//función para sortear los amigos
 const handleDraw = () => {
   const friends = nameList.get();
-  const pivot = Math.floor(Math.random() * friends.length);
-  showResult(friends[pivot]);
-  enableInputs(false);
+  if (friends.length > 0) {
+    const pivot = Math.floor(Math.random() * friends.length);
+    showResult(friends[pivot]);
+    enableInputs(false);
+  }
 };
 
 const handleKeyEnterPress = (event) => {
@@ -44,8 +48,10 @@ const enableInputs = (enable) => {
     result.classList.remove('result--hidden');
     clearList();
   } else {
+    console.log('a');
     addButton.classList.remove('disable');
     nameInput.addEventListener('keypress', handleKeyEnterPress);
+    result.classList.add('result--hidden');
     renderList();
   }
 };
@@ -53,3 +59,4 @@ const enableInputs = (enable) => {
 addButton.addEventListener('click', handleAddName);
 nameInput.addEventListener('keypress', handleKeyEnterPress);
 drawButton.addEventListener('click', handleDraw);
+backButton.addEventListener('click', enableInputs);
