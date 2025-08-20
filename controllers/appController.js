@@ -46,12 +46,15 @@ const enableInputs = (enable) => {
     addButton.classList.add('disable');
     nameInput.removeEventListener('keypress', handleKeyEnterPress);
     result.classList.remove('result--hidden');
+    backButton.classList.remove('disable');
     clearList();
   } else {
     console.log('a');
     addButton.classList.remove('disable');
     nameInput.addEventListener('keypress', handleKeyEnterPress);
     result.classList.add('result--hidden');
+
+    backButton.classList.add('disable');
     renderList();
   }
 };
