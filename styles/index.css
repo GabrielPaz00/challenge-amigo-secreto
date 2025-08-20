@@ -290,3 +290,37 @@ i.bi-trash-fill {
 .result--hidden {
   display: none;
 }
+
+.header-banner {
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.header-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .header-image {
+    max-width: 50%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .header-image {
+    max-width: 70%;
+    height: auto;
+  }
+}
